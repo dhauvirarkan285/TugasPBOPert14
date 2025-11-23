@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f514e517-9c19-47ef-9c27-f9ac441ab38f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM depokeretasbi;]]>
+	</queryString>
+	<field name="id_armada" class="java.lang.Integer"/>
+	<field name="nomor_armada" class="java.lang.String"/>
+	<field name="jenis_armada" class="java.lang.String"/>
+	<field name="tanggal_mulai_dinas" class="java.sql.Date"/>
+	<field name="tanggal_perawatan_terakhir" class="java.sql.Date"/>
+	<field name="tanggal_perawatan_berikutnya" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="25" uuid="8a6e21cf-f852-4682-b6dd-9defc06c49df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT KERETA API INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="555" height="25" uuid="22df8afc-6cb7-4e68-81a7-3ab375d4c047"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAERAH OPERASI VIII SURABAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="555" height="25" uuid="1703ded0-0f13-4902-888f-7997fe32725b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPO KERETA SURABAYA PASARTURI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="555" height="34" uuid="bb41100c-bc58-42b1-9a31-d8ce33ff7750"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA ARMADA KERETA PENUMPANG]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="81" height="20" uuid="13fe572d-33db-471c-bf14-db4dbe746743"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ID Armada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="41" width="89" height="20" uuid="cf21a51c-e71b-46bf-b7e3-a1c4bfdf1b18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Nomor Armada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="41" width="86" height="20" uuid="a888e6ca-833b-42a3-b256-32d918df1ca1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Armada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="41" width="77" height="20" uuid="1a8322ca-bb0a-459d-b3ad-6977829c9a21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tgl MD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="41" width="78" height="20" uuid="aa939497-8fa5-4e41-a3c1-87a230bcddfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tgl P24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="41" width="76" height="20" uuid="dd2fe8f4-3559-4076-8a8b-07dca249124a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tgl P48]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="81" height="20" uuid="34ced134-8aaf-4db3-9fe8-e394c5932cad"/>
+				<textFieldExpression><![CDATA[$F{id_armada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="89" height="20" uuid="51ced231-bf08-4057-bfee-a8e774c01cdc"/>
+				<textFieldExpression><![CDATA[$F{nomor_armada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="86" height="20" uuid="de37f179-d6b7-4870-bdf9-7fd35afb79a4"/>
+				<textFieldExpression><![CDATA[$F{jenis_armada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="74" height="20" uuid="81ecaf0d-4af7-480e-bbcf-d60fab134d49"/>
+				<textFieldExpression><![CDATA[$F{tanggal_mulai_dinas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="0" width="78" height="20" uuid="fd0bbbb6-a598-447d-a132-8c6d982fbf19"/>
+				<textFieldExpression><![CDATA[$F{tanggal_perawatan_terakhir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="0" width="76" height="20" uuid="9b2ff857-7810-49a4-81d4-307df19628e8"/>
+				<textFieldExpression><![CDATA[$F{tanggal_perawatan_berikutnya}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="377" y="105" width="176" height="20" uuid="9024b9f5-612f-4cd1-b8e3-1d17029e35ce"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Matthew Gabriel Setiawan, S.STP.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="0" width="176" height="20" uuid="4e3da6b8-6aae-446e-bffa-efb3a17b643b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Surabaya, 12 November 2025]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="20" width="176" height="20" uuid="5d053f65-451a-4741-8abb-f2bb5d8c296c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepala Depo Traksi Sby. Pasarturi]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
